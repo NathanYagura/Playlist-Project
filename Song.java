@@ -45,6 +45,9 @@ public class Song {
       public Boolean getLiked(){
         return liked;
       }
+      public void Like(){
+        liked = true;
+      }
 
       public int getSeconds(){
         return seconds%60;
