@@ -9,11 +9,8 @@ public class Playlist {
      * Fields-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
      * (CarDealership, Zoo) for structure on how this will look
      */
-<<<<<<< HEAD
-    private ArrayList<Song> inventory;
-=======
+    private ArrayList<Song> list;
 
->>>>>>> f6898ae (lucas this is what we do)
 
 
 
@@ -21,14 +18,10 @@ public class Playlist {
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
-<<<<<<< HEAD
       public Playlist(){
-        inventory = new ArrayList<Song>();
+        list = new ArrayList<Song>();
         
     }
-=======
-
->>>>>>> f6898ae (lucas this is what we do)
 
       
 
@@ -42,10 +35,34 @@ public class Playlist {
        * Determining the total duration of all songs
        * Removing all unliked songs from the playlist (careful with this one!)
        */
-<<<<<<< HEAD
-      public void addSong(){
-        
+
+      public void addSong(Song x){
+        list.add(x);
       }
-=======
->>>>>>> f6898ae (lucas this is what we do)
+      public void likeSong(Song x){
+        x.Like();
+      }
+      public void removeSong(Song x){
+        list.remove(x);
+      }
+      public void allSongs(){
+        for (int i=0; i<list.size();i++){
+            list.get(i).toString();
+        }
+      }
+      public void likedSongs(){
+        for (int i=0; i<list.size();i++){
+          if(list.get(i).getLiked()==true){
+            list.get(i).toString();
+          }
+      }
+    }
+    public int totalDuration(){
+      int time = 0;
+      for (int i=0; i<list.size();i++){
+
+      }
+      return time;
+    }
+      
 }

@@ -43,6 +43,9 @@ public class Song {
       public Boolean getLiked(){
         return liked;
       }
+      public void Like(){
+        liked = true;
+      }
 
       public String toString(){
         String y = " ";
