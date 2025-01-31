@@ -9,15 +9,16 @@ public class Playlist {
      * Fields-- This will likely just need to be the ArrayList of Songs. Reference our previous problems
      * (CarDealership, Zoo) for structure on how this will look
      */
-
-
-
+    private ArrayList<Song> list;
 
      /**
       * Constructor-- this doesn't need any parameters. You should just initialize the ArrayList and
       * then use additional methods to add Songs in one-by-one
       */
-
+      public Playlist(){
+        list = new ArrayList<Song>();
+        
+    }
 
       
 
@@ -31,4 +32,47 @@ public class Playlist {
        * Determining the total duration of all songs
        * Removing all unliked songs from the playlist (careful with this one!)
        */
+
+      public void addSong(Song x){
+        list.add(x);
+      }
+      public void likeSong(Song x){
+        x.Like();
+      }
+      public void removeSong(Song x){
+        list.remove(x);
+      }
+      public void allSongs(){
+        for (int i=0; i<list.size();i++){
+            list.get(i).toString();
+        }
+      }
+      public void likedSongs(){
+        for (int i=0; i<list.size();i++){
+          if(list.get(i).getLiked()==true){
+            list.get(i).toString();
+          }
+      }
+    }
+    public String totalDuration(){
+      int time = 0;
+      for (int i=0; i<list.size();i++){
+        time+=list.get(i).getSeconds();
+      }
+      return time/60 + ":" + time%60;
+    }
+    public void removeUnliked(){
+      while (true){
+        int counter = 0;
+        if(list.get(counter).getLiked()==false){
+          list.remove(counter);
+        }else{
+          counter++;
+        }
+        if (counter==list.size()){
+          break;
+        }
+      }
+    }
+      
 }
