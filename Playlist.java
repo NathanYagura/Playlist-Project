@@ -35,6 +35,7 @@ public class Playlist {
 
       public void addSong(Song x){
         list.add(x);
+        System.out.println("Adding '"+x.getName()+"' by "+x.getArtist()+"("+(x.getSeconds()/60)+":"+x.getSeconds()%60+")");
       }
       public void likeSong(Song x){
         x.Like();
