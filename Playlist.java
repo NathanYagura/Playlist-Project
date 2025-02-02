@@ -19,9 +19,6 @@ public class Playlist {
         list = new ArrayList<Song>();
         
     }
-
-      
-
       /**
        * Methods-- Remember that you need to be able to complete all of the following:
        * Adding a song
@@ -35,10 +32,10 @@ public class Playlist {
 
       public void addSong(Song x){
         list.add(x);
-        System.out.println("Adding '"+x.getName()+"' by "+x.getArtist()+"("+(x.getSeconds()/60)+":"+x.getSeconds()%60+")");
+        System.out.println("Adding"+ x.toString());
       }
       public void likeSong(Song x){
-        x.Like();
+        x.like();
       }
       public void removeSong(Song x){
         list.remove(x);
@@ -58,7 +55,7 @@ public class Playlist {
     public String totalDuration(){
       int time = 0;
       for (int i=0; i<list.size();i++){
-        time+=list.get(i).getSeconds();
+        time+=list.get(i).totalTime();
       }
       return time/60 + ":" + time%60;
     }
