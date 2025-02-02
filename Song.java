@@ -60,13 +60,6 @@ public class Song {
       }
 
       public String toString(){
-        String y= "";
-        if(liked == true){
-        y = "true";
-        }
-        if(liked == false){
-            y = "false";
-        }
         String x = (name + " by " + artist + " ("+seconds/60+":"+seconds%60+") "+" -- liked: " + getLiked());
         return x;
       }
