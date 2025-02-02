@@ -17,11 +17,12 @@ public class PlaylistTester {
          * is something like...
          * p.addSong(new Song(..., ..., ...))
          */
-        n.addSong(new Song("Bay Harbor","Jam"));
+        n.addSong(new Song("Bay Harbor","Jam",89));
 
 
         System.out.println("Printing the songs...\n");
         //Print out all the songs in the playlist to verify it's working correctly
+        
 
 
         System.out.println("\nLiking the songs in position X, Y, Z, etc....\n");
