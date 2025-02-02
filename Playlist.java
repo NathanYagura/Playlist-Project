@@ -34,21 +34,21 @@ public class Playlist {
         list.add(x);
         System.out.println("Adding"+ x.toString());
       }
-      public void likeSong(Song x){
-        x.like();
+      public void likeSong(int x){
+        list.get(x).like();
       }
-      public void removeSong(Song x){
+      public void removeSong(int x){
         list.remove(x);
       }
       public void allSongs(){
         for (int i=0; i<list.size();i++){
-            list.get(i).toString();
+            System.out.println(list.get(i).toString());
         }
       }
       public void likedSongs(){
         for (int i=0; i<list.size();i++){
           if(list.get(i).getLiked()==true){
-            list.get(i).toString();
+            System.out.println(list.get(i).toString());
           }
       }
     }
