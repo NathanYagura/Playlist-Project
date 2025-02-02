@@ -19,9 +19,6 @@ public class Playlist {
         list = new ArrayList<Song>();
         
     }
-
-      
-
       /**
        * Methods-- Remember that you need to be able to complete all of the following:
        * Adding a song
